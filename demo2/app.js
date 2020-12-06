@@ -47,6 +47,17 @@ app.get('/news/:id', (req, res) => {
 }
 )
 
+app.get('/login', (req, res) => {
+    res.render("login", {
+    })
+}
+)
+
+app.post('/login', (req, res) => {
+    res.send("登陆成功")
+}
+)
+
 //错误处理中间件
 app.use((req, res, next) => {
     res.status(404).send("404")
